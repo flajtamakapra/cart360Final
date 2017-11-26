@@ -1,2 +1,4 @@
 ofxFilterbank
 ofxOsc
+ofxMaxim
+ofxDatGui

@@ -1,6 +1,6 @@
 obj/linux64/Release/src/ofApp.o: \
- /home/supermaxpower/dev/openFrameworks/apps/myApps/example-audioInput/src/ofApp.cpp \
- /home/supermaxpower/dev/openFrameworks/apps/myApps/example-audioInput/src/ofApp.h \
+ /home/supermaxpower/dev/openFrameworks/apps/myApps/cart360Final/src/ofApp.cpp \
+ /home/supermaxpower/dev/openFrameworks/apps/myApps/cart360Final/src/ofApp.h \
  /home/supermaxpower/dev/openFrameworks/libs/openFrameworks/ofMain.h \
  /home/supermaxpower/dev/openFrameworks/libs/openFrameworks/utils/ofConstants.h \
  /home/supermaxpower/dev/openFrameworks/libs/tess2/include/tesselator.h \
@@ -369,9 +369,39 @@ obj/linux64/Release/src/ofApp.o: \
  /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/src/ofxOscReceiver.h \
  /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
  /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
- /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h
+ /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/src/ofxMaxim.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maximilian.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiFFT.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/fft.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiGrains.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maximilian.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiMFCC.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiFFT.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiBark.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/ofxDatGui.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiGroups.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiLabel.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiComponent.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiIntObject.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/themes/ofxDatGuiThemes.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/themes/ofxDatGuiTheme.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiEvents.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiConstants.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiButton.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiSlider.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTextInputField.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTextInput.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiFRM.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGui2dPad.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiColorPicker.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiMatrix.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTimeGraph.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiScrollView.h \
+ /home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiControls.h
 
-/home/supermaxpower/dev/openFrameworks/apps/myApps/example-audioInput/src/ofApp.h:
+/home/supermaxpower/dev/openFrameworks/apps/myApps/cart360Final/src/ofApp.h:
 
 /home/supermaxpower/dev/openFrameworks/libs/openFrameworks/ofMain.h:
 
@@ -1146,3 +1176,63 @@ obj/linux64/Release/src/ofApp.o: \
 /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
 
 /home/supermaxpower/dev/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/src/ofxMaxim.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maximilian.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiFFT.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/fft.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiGrains.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maximilian.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiMFCC.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiFFT.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxMaxim/libs/maxiBark.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/ofxDatGui.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiGroups.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiLabel.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiComponent.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiIntObject.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/themes/ofxDatGuiThemes.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/themes/ofxDatGuiTheme.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiEvents.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/core/ofxDatGuiConstants.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiButton.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiSlider.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTextInputField.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTextInput.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiFRM.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGui2dPad.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiColorPicker.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiMatrix.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiTimeGraph.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiScrollView.h:
+
+/home/supermaxpower/dev/openFrameworks/addons/ofxDatGui/src/components/ofxDatGuiControls.h:
