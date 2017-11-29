@@ -62,6 +62,7 @@ class ofApp : public ofBaseApp{
 
         //------- Mike Input
 		ofSoundStream soundStreamIn;
+        ofSoundStream soundStreamOut;
 		int inChan, outChan;
         ofxFilterbank filterBank;
 		
@@ -84,10 +85,10 @@ class ofApp : public ofBaseApp{
                 frequency = _f;
                 modulation = _m;
                 volume = _v;
-                env.setAttack(100);
-                env.setDecay(10);
-                env.setSustain(1);
-                env.setRelease(500);
+                env.setAttack(2000);
+                env.setDecay(100);
+                env.setSustain(10);
+                env.setRelease(5000);
             }
 
             // Hardcoding the types, for now, i don't need all the possibilities.
@@ -121,6 +122,10 @@ class ofApp : public ofBaseApp{
             void vol(double v){
                 this->volume = v;
             }
+            void attack(int a){
+                this->attack(a);
+            }
+
             void release(int r){
                 env.setRelease(r);
             }

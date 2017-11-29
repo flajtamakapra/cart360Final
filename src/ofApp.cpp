@@ -27,14 +27,18 @@ void ofApp::setup(){
 
     // ------ Maxim
     ofSoundStreamSetup(2,0, this, sampleRate, bufferSize, 2);
+   // ofSoundStreamListDevices();
+    //ofSoundStream.setDeviceID(0);
     //frequency = 220;
     modulationFrequency = 0;
     modulationIndex = 0;
     modSpeed = 2;
 
 
-    // Background initialisation
-    backGroundNoise.emplace_back(new Key(50, 0.9, 0.6));
+    // Background initialisation - input: float frequence, float volume, float modulation speed
+    backGroundNoise.emplace_back(new Key(40, 0.7, 0.2));
+    backGroundNoise.emplace_back(new Key(40, 0.5, 0.9));
+    backGroundNoise.emplace_back(new Key(40, 0.1));
 
     // Memory notes initialisation
     for(int i = 0 ; i < 10 ; i++){
@@ -61,6 +65,7 @@ void ofApp::update(){
     // VOICES
     // Turning on background noise (breathing)
     backGroundNoise[0]->on();
+    backGroundNoise[1]->on();
 
     // Memory buffer: will be randomly affected with a range of notes
     queue<vector<int>> memoryNotes;
@@ -80,16 +85,11 @@ void ofApp::update(){
 
             // Attribuate all the notes recorded and play them
             for(int i = 0 ; i < 10 ; i++){
-                if(notesInTime.front().size() == 0) {
-                    int n = ofMap(ofSignedNoise(1), -1, 1, 0, 100);
-                    keys[i]->freq(n);
-                    keys[i]->release(ofRandom(100, 2000));
-                    keys[i]->on();
-                }else {
+                if(notesInTime.front().size() > 0) {
 
                     int n = ofMap(notesInTime.front()[i], 21, 108, 0, 1000 );
                     keys[i]->freq(n);
-                    keys[i]->release(ofRandom(100, 2000));
+                    keys[i]->release(ofRandom(500, 3000));
                     keys[i]->on();
                 }
             }
@@ -112,7 +112,7 @@ void ofApp::update(){
         // 2 - Copy this range in memory buffer queue (memoryNotes)
         // 3 - Play the memory notes range.
         if(!global.empty() && !sPressed){
-            unsigned int ref = ofRandom(0, 10); // ESSAYER AVEC OFSIGNEDNOISE()
+            unsigned int ref = ofRandom(0, 10);
             unsigned int rd = ofRandom(0,10);
             if (ref == rd) {
                 unsigned int indexA = ofRandom(0, global.size());
@@ -133,16 +133,10 @@ void ofApp::update(){
                 // Attribuate all the notes recorded and play them
                 for(int i = 0 ; i < 10 ; i++){
 
-                    if(memoryNotes.front().size() == 0){
-                        int n = ofMap(ofSignedNoise(1), -1, 1, 0, 1000 );
-                        memoryNoise[i]->freq(n);
-                        memoryNoise[i]->release(ofRandom(100, 2000));
-                        memoryNoise[i]->on();
-                    }
-                    else {
+                    if(memoryNotes.front().size() > 0){
                         int n = ofMap(memoryNotes.front()[i], 21, 108, 0, 1000 );
                         memoryNoise[i]->freq(n);
-                        memoryNoise[i]->release(ofRandom(100, 2000));
+                        memoryNoise[i]->release(ofRandom(1000, 3000));
                         memoryNoise[i]->on();
 
                     }
@@ -178,11 +172,11 @@ void ofApp::update(){
             backGroundNoise[0]->vol(0.1);
             cout<<notes.size()<<endl;
 
-            //if(notes.size()>0){
+            if(notes.size()>0){
                 notesInTime.push(notes);
                 global.push_back(notes);
 
-            //}
+            }
         }
         if(m.getAddress() == "/buttonOff" && sPressed){
             sPressed = false;
@@ -321,20 +315,21 @@ void ofApp::audioOut(float * output, int bufferSize, int nChannels) {
     for(unsigned i = 0 ; i < bufferSize ; i++) {
 
         currentFrame = backGroundNoise[0]->play(1);
+        currentFrame += backGroundNoise[1]->play(1);
             if(isPlaying){
                 for(int j = 0 ; j < keys.size() ; j++){
-                      currentFrame += keys[j]->play(0) / (keys.size()+1);
+                      currentFrame += keys[j]->play(0) / (keys.size()+2);
                 }
             }else {
                 for(int j = 0 ; j < memoryNoise.size() ; j++){
-                      currentFrame += memoryNoise[j]->play(0) / (keys.size()+1);
+                      currentFrame += memoryNoise[j]->play(0) / (keys.size()+2);
                 }
             }
 
 
         mix.stereo(currentFrame, outputs, 0.5);
-        output[i * nChannels] = outputs[0] * 0.8;
-        output[i * nChannels +1] = outputs[1] * 0.8;
+        output[i * nChannels] = outputs[0] * 0.5;
+        output[i * nChannels +1] = outputs[1] * 0.5;
 
     }
 
